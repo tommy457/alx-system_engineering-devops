@@ -1,2 +1,2 @@
 #!/bin/bash
-cat "New Empty File" | sort | uniq -u
+sort | uniq -u
