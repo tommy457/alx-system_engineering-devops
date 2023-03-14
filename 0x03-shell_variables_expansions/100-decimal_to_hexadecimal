@@ -1,2 +1,2 @@
 #!/bin/bash
-x=$( printf "%x" $DECIMAL ) ; echo $x
+echo $( printf "%x" $DECIMAL )
