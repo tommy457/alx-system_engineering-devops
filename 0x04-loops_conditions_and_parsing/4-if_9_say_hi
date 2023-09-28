@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Bash script that displays Best School 10 times but for the 9th iteration, displays Best School and then Hi on a new line.
 COUNTER=0
-until [ $COUNTER -eq 10 ]; do
+until [ $COUNTER -lt 10 ]; do
 	if [ "$COUNTER" -eq 9 ]; then
 		echo "Hi"
 	fi
