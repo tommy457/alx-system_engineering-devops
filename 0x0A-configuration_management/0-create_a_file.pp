@@ -1,3 +1,5 @@
+# create a file in /tmp.
+
 file { 'create file':
   ensure  => 'file',
   path    => '/tmp/school',
