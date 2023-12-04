@@ -17,7 +17,10 @@ package { 'nginx':
 file_line { 'add header':
   path  => '/etc/nginx/sites-enabled/default',
   after => 'server_name _;',
-  line  => "        add_header X-Served-By ${hostname} always;",
+  line  => '        add_header X-Served-By $hostname;',
 }
 
-exec {'/usr/bin/env sudo service nginx restart':}
+exec { 'restart nginx':
+  path    => '/usr/bin:bin/',
+  command => 'sudo service nginx restart',
+}
