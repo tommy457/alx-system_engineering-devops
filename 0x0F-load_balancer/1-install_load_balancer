@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Script that Installs haproxy and Configure HAproxy so that it send traffic to two servers
 
-CONF = "\
+CONF="\
 frontend my_fronted
     bind *:80
     mode http
