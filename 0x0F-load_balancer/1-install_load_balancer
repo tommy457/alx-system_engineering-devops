@@ -9,8 +9,8 @@ frontend my_fronted
     
 backend my_backend
     balance roundrobin
-    server foo1 34.207.212.115:80 check
-    server foo2 34.207.212.115:80 check
+    server web1 54.236.24.86:80 check
+    server web2 18.233.63.71:80 check
 "
 apt-get install --no-install-recommends software-properties-common
 add-apt-repository ppa:vbernat/haproxy-2.0
