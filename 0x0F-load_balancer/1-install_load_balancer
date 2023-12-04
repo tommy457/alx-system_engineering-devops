@@ -12,7 +12,7 @@ backend my_backend
     server 357294-web-01 54.236.24.86:80 check
     server 357294-web-02 18.233.63.71:80 check
 "
-apt-get -y update
-apt-get -y install haproxy=2.0.\*
-echo "$CONF" >> /etc/haproxy/haproxy.cfg
-service haproxy restart
+sudo apt-get -y update
+sudo apt-get -y install haproxy
+sudo echo "$CONF" >> /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
