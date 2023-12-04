@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Script that Installs haproxy and Configure HAproxy so that it send traffic to two servers
 
-CONF = "
+CONF = "\
 frontend my_fronted
     bind *:80
     mode http
@@ -12,8 +12,6 @@ backend my_backend
     server web1 54.236.24.86:80 check
     server web2 18.233.63.71:80 check
 "
-apt-get install --no-install-recommends software-properties-common
-add-apt-repository ppa:vbernat/haproxy-2.0
 apt-get -y update
 apt-get -y install haproxy=2.0.\*
 echo "$CONF" >> /etc/haproxy/haproxy.cfg
