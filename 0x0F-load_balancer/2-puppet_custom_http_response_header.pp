@@ -37,7 +37,7 @@ file_line { 'redirect':
 file_line { 'header':
   path  => '/etc/nginx/sites-enabled/default',
   after => 'server_name _;',
-  line  => '        add_header X-Served-By \$hostname always;',
+  line  => '        add_header X-Served-By $hostname always;',
 }
 
 exec {'/usr/bin/env service nginx restart':}
