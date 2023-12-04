@@ -15,7 +15,7 @@ package { 'nginx':
 }
 
 file_line { 'add header':
-  path  => '/etc/nginx/sites-enabled/default',
+  path  => '/etc/nginx/sites-available/default',
   after => 'server_name _;',
   line  => '        add_header X-Served-By $hostname;',
 }
