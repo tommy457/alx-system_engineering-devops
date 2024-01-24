@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Reload the configuration, start the new worker processes with a new configuration
+# and gracefully shutdown older workers.
+# check `https://docs.gunicorn.org/en/stable/signals.html` for more.
+pkill -HUP gunicorn
